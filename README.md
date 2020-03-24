@@ -1,5 +1,7 @@
-# lint
+This package will provide the following linting features:
 
-## Commitlint
+# Eslint
 
-commitlint - Will check that your commits follow the conventional-commit guidelines
+# Stylelint
+
+# Commitlint

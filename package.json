@@ -2,8 +2,10 @@
   "name": "@cokoapps/lint",
   "version": "0.0.0",
   "description": "Linter configurations and dependencies for coko's projects",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "cz": "git-cz",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,10 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "babel-eslint": "^10.1.0",
+    "commitizen": "^4.0.3",
+    "conventional-commit-types": "^3.0.0",
+    "cz-conventional-changelog": "^3.1.0",
+    "cz-customizable": "^6.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-cypress": "^0.28.0",
@@ -36,10 +42,18 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^1.19.1"
+    "husky": "^4.2.3",
+    "longest": "^2.0.1",
+    "prettier": "^2.0.2",
+    "right-pad": "^1.0.1"
   },
   "devDependencies": {
     "standard-version": "^7.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "husky": {
     "hooks": {
