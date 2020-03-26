@@ -13,6 +13,12 @@ module.exports = {
   ],
   plugins: ['jest', 'prettier'],
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['.cz-config.js', '.eslintrc.js'],
+      },
+    ],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -23,21 +29,6 @@ module.exports = {
     ],
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    // 'react/sort-comp': [
-    //   1,
-    //   {
-    //     order: [
-    //       'constructor',
-    //       'lifecycle',
-    //       'everything-else',
-    //       '/^on.+$/',
-    //       'rendering',
-    //     ],
-    //     groups: {
-    //       rendering: ['/^render.+$/', 'render'],
-    //     },
-    //   },
-    // ],
     'react/jsx-sort-props': [1, { ignoreCase: true }],
     // 'sort-keys': [1, 'asc', { caseSensitive: false }],
   },

@@ -1,8 +1,43 @@
-This package will provide the following linting features:
+This package provides everything that is needed to lint applications built by the Coko team.
+
+To install:
+
+```
+yarn add --dev @coko/lint
+```
+
+You shouldn't need to install any other dependency.  
+Just follow the instructions below.
+
+All files below should be added to the root folder of your project, unless otherwise specified, or if you have a specific reason not to.
 
 # Eslint
 
+Add an `.eslintrc.js` in your root folder:
+
+```js
+const { eslint } = require('@coko/lint')
+
+/**
+ * You can edit the eslint config file here.
+ *
+ * eg.
+ * eslint.rules['no-console'] = ['warn', { allow: ['error', 'warn'] }],
+ *
+ */
+
+module.exports = eslint
+```
+
+Add an `.eslintignore` file:
+
+```js
+!.eslintrc.js
+```
+
 # Stylelint
+
+coming soon
 
 # Commitlint & Commitizen
 
@@ -29,7 +64,7 @@ Add the following lines to your `package.json`:
 }
 ```
 
-In your root directory, create a `commitlint.config.js` file, with the following content:
+Create a `commitlint.config.js` file:
 
 ```js
 module.exports = {
@@ -37,7 +72,7 @@ module.exports = {
 }
 ```
 
-Also in your root directory, create a `.cz-config.js` file, and add the following content:
+Create a `.cz-config.js` file:
 
 ```js
 const { commitizen } = require('@coko/lint')
@@ -58,7 +93,7 @@ const { commitizen } = require('@coko/lint')
 module.exports = commitizen
 ```
 
-Finally, edit your `.eslintignore` file to make sure the last file you added gets linted as well.
+Finally, add the following line to your `.eslintignore` file to make sure the last file you added gets linted as well.
 
 ```
 !.cz-config.js
