@@ -35,6 +35,30 @@ Add an `.eslintignore` file:
 !.eslintrc.js
 ```
 
+# Prettier
+
+Add a `.prettierrc.js` file:
+
+```js
+const { prettier } = require('@coko/lint')
+
+/**
+ * You can edit the config here:
+ *
+ * eg.
+ * prettier.semi = true
+ *
+ */
+
+module.exports = prettier
+```
+
+Add the following line to your `.eslintignore` file:
+
+```
+!.prettierrc.js
+```
+
 # Stylelint
 
 coming soon

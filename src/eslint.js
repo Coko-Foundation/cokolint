@@ -16,7 +16,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['.cz-config.js', '.eslintrc.js'],
+        devDependencies: ['.cz-config.js', '.eslintrc.js', '.prettierrc.js'],
       },
     ],
     'jsx-a11y/anchor-is-valid': [
