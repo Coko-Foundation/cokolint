@@ -1,22 +1,5 @@
-const longest = require('longest')
-const rightPad = require('right-pad')
-const conventionalCommitTypes = require('conventional-commit-types')
+const commitizenConfig = require('./src/commitizen')
 
-// Borrowed from cz-conventional-changelog
-const { types } = conventionalCommitTypes
-const length = longest(Object.keys(types)).length + 1
+commitizenConfig.scopes = ['eslint', 'stylelint', 'commitlint', '*']
 
-const choices = Object.keys(types).map(key => {
-  const type = types[key]
-  return {
-    name: `${rightPad(`${key}:`, length)} ${type.description}`,
-    value: key,
-  }
-})
-
-// Check https://github.com/leonardoanalista/cz-customizable#options for more options
-module.exports = {
-  scopes: ['eslint', 'stylelint', 'commitlint', '*'],
-  skipQuestions: ['body', 'breaking', 'footer'],
-  types: choices,
-}
+module.exports = commitizenConfig

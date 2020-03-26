@@ -1,7 +1,7 @@
+const commitizenConfig = require('./commitizen')
 const eslintConfig = require('./eslint')
 
-console.log(eslintConfig)
-
 module.exports = {
+  commitizen: commitizenConfig,
   eslint: eslintConfig,
 }

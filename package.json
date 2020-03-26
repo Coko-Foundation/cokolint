@@ -1,5 +1,5 @@
 {
-  "name": "@cokoapps/lint",
+  "name": "@coko/lint",
   "version": "0.0.1",
   "description": "Linter configurations and dependencies for coko's projects",
   "main": "src/index.js",
@@ -19,6 +19,9 @@
   ],
   "author": "Yannis Barlas",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
