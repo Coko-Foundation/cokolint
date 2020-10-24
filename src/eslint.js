@@ -16,6 +16,14 @@ module.exports = {
     'prettier/standard',
   ],
   plugins: ['jest', 'prettier'],
+  ignorePatterns: [
+    '_build',
+    '!.storybook',
+    '!.cz-config.js',
+    '!.eslintrc.js',
+    '!.prettierrc.js',
+    '!.stylelintrc.js',
+  ],
   rules: {
     'import/no-extraneous-dependencies': [
       'error',
