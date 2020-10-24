@@ -1,5 +1,15 @@
 This package provides everything that is needed to lint applications built by the Coko team.
 
+Features / libraries provided, along with their configuration:
+
+- **Eslint**
+- **Stylelint**
+- **Prettier**
+- **Husky** (to provide pre-commit hooks)
+- **Lint-staged** (combined with husky, will run linters on staged code before it is commited)
+- **Commitlint** (to lint the commit message itself)
+- **Commitizen** (to provide the cli helper for the conventional commit standard)
+
 To install:
 
 ```
@@ -29,12 +39,6 @@ const { eslint } = require('@coko/lint')
 module.exports = eslint
 ```
 
-Add an `.eslintignore` file:
-
-```js
-!.eslintrc.js
-```
-
 # Prettier
 
 Add a `.prettierrc.js` file:
@@ -53,47 +57,52 @@ const { prettier } = require('@coko/lint')
 module.exports = prettier
 ```
 
-Add the following line to your `.eslintignore` file:
-
-```
-!.prettierrc.js
-```
-
 # Stylelint
 
-coming soon
+Add a `.stylelintrc.js` file:
 
-# Commitlint & Commitizen
+```js
+const { stylelint } = require('@coko/lint')
 
-This lints your commits to make sure it follows the conventional commits specification.  
-It also adds an interactive cli tool to build valid commits (run it with `yarn cz`).
+/**
+ * You can edit the config here:
+ *
+ * eg.
+ * stylelint.rules['your-rule'] = true
+ *
+ */
 
-You don't need to install anything else.
-
-Add the following lines to your `package.json`:
-
-```json
-"scripts": {
-  "cz": "git-cz"
-},
-"config": {
-  "commitizen": {
-    "path": "cz-customizable"
-  }
-},
-"husky": {
-  "hooks": {
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-  }
-}
+module.exports = stylelint
 ```
 
-Create a `commitlint.config.js` file:
+# Commitlint, Lint staged & Commitizen
+
+`commitlint` lints your commits to make sure it follows the conventional commits specification. `lint-staged` will run the linters on changes staged in git. These two will be executed every time a commit is made, with the help of `husky`'s `pre-commit` hook.
+
+The following also adds `commitizen`, an interactive cli tool to build valid commits (run it with `yarn cz`).
+
+Create a `.commitlintrc.js` file:
 
 ```js
 module.exports = {
   extends: ['@commitlint/config-conventional'],
 }
+```
+
+Add a `.lintstagedrc.js` file:
+
+```js
+const { lintstaged } = require('@coko/lint')
+
+/**
+ * You can edit the config here:
+ *
+ * eg.
+ * lintstaged.linters['*.js'] = ['my-custom-linter']
+ *
+ */
+
+module.exports = lintstaged
 ```
 
 Create a `.cz-config.js` file:
@@ -117,8 +126,20 @@ const { commitizen } = require('@coko/lint')
 module.exports = commitizen
 ```
 
-Finally, add the following line to your `.eslintignore` file to make sure the last file you added gets linted as well.
+Finally, add the following lines to your `package.json`:
 
-```
-!.cz-config.js
+```json
+"scripts": {
+  "cz": "git-cz"
+},
+"config": {
+  "commitizen": {
+    "path": "cz-customizable"
+  }
+},
+"husky": {
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS && lint-staged"
+  }
+}
 ```
