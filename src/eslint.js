@@ -23,7 +23,7 @@ module.exports = {
     '!.cz-config.js',
     '!.eslintrc.js',
     '!.jest.config.js',
-    '!.linstagedrc.js',
+    '!.lintstagedrc.js',
     '!.prettierrc.js',
     '!.stylelintrc.js',
   ],
