@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://gitlab.coko.foundation///compare/v0.0.4...v0.0.5) (2020-10-24)
+
+
+### Bug Fixes
+
+* **lintstaged:** export lintstaged ([20a61b5](https://gitlab.coko.foundation///commit/20a61b577d6951aee02511b5ee398af306f6fae8))
+
 ### [0.0.4](https://gitlab.coko.foundation///compare/v0.0.3...v0.0.4) (2020-10-24)
 
 
