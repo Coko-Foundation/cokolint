@@ -1,6 +1,10 @@
 module.exports = {
+  parser: 'babel-eslint',
   env: {
-    'jest/globals': true,
+    browser: true,
+    es6: true,
+    jest: true,
+    node: true,
   },
   extends: [
     'airbnb',
@@ -16,7 +20,25 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['.cz-config.js', '.eslintrc.js', '.prettierrc.js'],
+        devDependencies: [
+          // storybook
+          '.storybook/*',
+          '**/stories/**/*.js',
+          // tests
+          'cypress/**',
+          '**/*.spec.js',
+          '**/*.test.js',
+          // webpack
+          'webpack/**',
+          // configs
+          '.commitlintrc.js',
+          '.cz-config.js',
+          '.eslintrc.js',
+          '.jest.config.js',
+          '.lintstagedrc.js',
+          '.prettierrc.js',
+          '.stylelintrc.js',
+        ],
       },
     ],
     'jsx-a11y/anchor-is-valid': [
@@ -28,7 +50,7 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [2, { extensions: ['.js'] }], // disallows .jsx files
     'react/jsx-sort-props': [1, { ignoreCase: true }],
     // 'sort-keys': [1, 'asc', { caseSensitive: false }],
   },
