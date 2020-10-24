@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://gitlab.coko.foundation///compare/v0.0.5...v1.0.0) (2020-10-24)
+
+
+### Bug Fixes
+
+* **eslint:** fix ignore patterns typo ([9d6660a](https://gitlab.coko.foundation///commit/9d6660ac846520f3bd0bf0b9b02f8236b32d44ca))
+
 ### [0.0.5](https://gitlab.coko.foundation///compare/v0.0.4...v0.0.5) (2020-10-24)
 
 
