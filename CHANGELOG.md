@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://gitlab.coko.foundation///compare/v0.0.2...v0.0.3) (2020-10-24)
+
+
+### Features
+
+* **stylelint:** add stylelint dependencies and first config ([2608ed7](https://gitlab.coko.foundation///commit/2608ed7a274264d680fcc775d43846ff7d3d256a))
+
 ### [0.0.2](https://gitlab.coko.foundation///compare/v0.0.1...v0.0.2) (2020-03-26)
 
 

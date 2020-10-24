@@ -1,6 +1,6 @@
 {
   "name": "@coko/lint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Linter configurations and dependencies for coko's projects",
   "main": "src/index.js",
   "scripts": {
