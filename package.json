@@ -48,7 +48,12 @@
     "husky": "^4.2.3",
     "longest": "^2.0.1",
     "prettier": "^2.0.2",
-    "right-pad": "^1.0.1"
+    "right-pad": "^1.0.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "devDependencies": {
     "standard-version": "^7.1.0"
