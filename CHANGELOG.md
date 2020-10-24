@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://gitlab.coko.foundation///compare/v0.0.3...v0.0.4) (2020-10-24)
+
+
+### Features
+
+* **eslint:** add env, parser and more dev folders ([af2e882](https://gitlab.coko.foundation///commit/af2e8827abb2b6f79c9aaca756882b1b9449fc4f))
+* **eslint:** add ignorePatterns so that eslintignore is not necessary ([db723bf](https://gitlab.coko.foundation///commit/db723bfa6d03511580b6797ddbd65b3adc25b1e5))
+* **lintstaged:** add lintstaged dependency and config ([f30641e](https://gitlab.coko.foundation///commit/f30641e4ea6aa63d12070a6479c5f5e4f16b2f00))
+
 ### [0.0.3](https://gitlab.coko.foundation///compare/v0.0.2...v0.0.3) (2020-10-24)
 
 
