@@ -1,11 +1,13 @@
-const commitizenConfig = require('./commitizen')
-const eslintConfig = require('./eslint')
-const prettierConfig = require('./prettier')
-const stylelintConfig = require('./stylelint')
+const commitizen = require('./commitizen')
+const eslint = require('./eslint')
+const prettier = require('./prettier')
+const stylelint = require('./stylelint')
+const lintstaged = require('./lintstaged')
 
 module.exports = {
-  commitizen: commitizenConfig,
-  eslint: eslintConfig,
-  prettier: prettierConfig,
-  stylelint: stylelintConfig,
+  commitizen,
+  eslint,
+  prettier,
+  stylelint,
+  lintstaged,
 }
