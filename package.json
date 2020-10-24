@@ -46,6 +46,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.3",
+    "lint-staged": "^10.4.2",
     "longest": "^2.0.1",
     "prettier": "^2.0.2",
     "right-pad": "^1.0.1",

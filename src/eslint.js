@@ -19,8 +19,11 @@ module.exports = {
   ignorePatterns: [
     '_build',
     '!.storybook',
+    '!.commitlintrc.js',
     '!.cz-config.js',
     '!.eslintrc.js',
+    '!.jest.config.js',
+    '!.linstagedrc.js',
     '!.prettierrc.js',
     '!.stylelintrc.js',
   ],
