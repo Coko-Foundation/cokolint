@@ -11,6 +11,7 @@ module.exports = {
     'standard',
     'standard-react',
     'plugin:jest/recommended',
+    'plugin:cypress/recommended',
     'prettier',
     'prettier/react',
     'prettier/standard',
