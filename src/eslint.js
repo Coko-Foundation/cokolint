@@ -64,6 +64,10 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js'] }], // disallows .jsx files
     'react/jsx-sort-props': [1, { ignoreCase: true }],
+    'react/prop-types': [
+      2,
+      { ignore: ['children', 'className', 'onClick', 'theme'] },
+    ],
     // 'sort-keys': [1, 'asc', { caseSensitive: false }],
   },
 }
