@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://gitlab.coko.foundation///compare/v1.0.2...v1.1.0) (2020-10-28)
+
+
+### Features
+
+* **eslint:** add exceptions to prop types ([7f71744](https://gitlab.coko.foundation///commit/7f71744254db5ddf1357ea9b39901715968cb93d))
+* **stylelint:** add empty lines rule ([0cf0bf1](https://gitlab.coko.foundation///commit/0cf0bf1f7e1e9cf2bdec5e21a656491fcba73a33))
+* **stylelint:** add no-important and empty-line rules ([18575f4](https://gitlab.coko.foundation///commit/18575f49d3fefde34f8b60ca86622164321c0fb3))
+
 ### [1.0.2](https://gitlab.coko.foundation///compare/v1.0.1...v1.0.2) (2020-10-26)
 
 
