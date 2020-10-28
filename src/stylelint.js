@@ -8,5 +8,6 @@ module.exports = {
   rules: {
     'order/order': ['declarations', 'rules', 'at-rules'],
     'order/properties-alphabetical-order': true,
+    'rule-empty-line-before': 'always',
   },
 }
