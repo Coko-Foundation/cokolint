@@ -6,8 +6,13 @@ module.exports = {
   plugins: ['stylelint-order'],
   processors: ['stylelint-processor-styled-components'],
   rules: {
-    'order/order': ['declarations', 'rules', 'at-rules'],
+    'declaration-no-important': true,
+    // 'order/order': ['declarations', 'rules', 'at-rules'],
+    'order/order': null,
     'order/properties-alphabetical-order': true,
-    'rule-empty-line-before': 'always',
+    'rule-empty-line-before': [
+      'always',
+      { ignore: ['first-nested', 'after-comment'] },
+    ],
   },
 }
