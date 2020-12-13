@@ -61,6 +61,7 @@ module.exports = {
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'block' },
