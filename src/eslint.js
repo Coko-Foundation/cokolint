@@ -61,6 +61,15 @@ module.exports = {
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'block' },
+      { blankLine: 'always', prev: 'block', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'multiline-const' },
+      { blankLine: 'always', prev: 'multiline-const', next: '*' },
+    ],
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js'] }], // disallows .jsx files
     'react/jsx-sort-props': [1, { ignoreCase: true }],
