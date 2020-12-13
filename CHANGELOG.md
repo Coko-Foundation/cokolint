@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://gitlab.coko.foundation///compare/v1.2.0...v1.3.0) (2020-12-13)
+
+
+### Features
+
+* **eslint:** make console.log an error ([fa4aca8](https://gitlab.coko.foundation///commit/fa4aca8d4e83b638e74da5acf3c98516e6e79ee6))
+* **stylelint:** add build to ignore patterns ([efe8e1f](https://gitlab.coko.foundation///commit/efe8e1f7c16145138335b673f4701cbaaa6f6466))
+
 ## [1.2.0](https://gitlab.coko.foundation///compare/v1.1.0...v1.2.0) (2020-12-13)
 
 
