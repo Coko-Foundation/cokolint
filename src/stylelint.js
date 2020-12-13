@@ -3,6 +3,7 @@ module.exports = {
     'stylelint-config-recommended',
     'stylelint-config-styled-components',
   ],
+  ignoreFiles: ['_build'],
   plugins: ['stylelint-order'],
   processors: ['stylelint-processor-styled-components'],
   rules: {
