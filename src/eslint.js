@@ -19,6 +19,7 @@ module.exports = {
   plugins: ['jest', 'prettier'],
   ignorePatterns: [
     '_build',
+    'dist',
     '!.storybook',
     '!.commitlintrc.js',
     '!.cz-config.js',
@@ -50,6 +51,8 @@ module.exports = {
           '.lintstagedrc.js',
           '.prettierrc.js',
           '.stylelintrc.js',
+          // other
+          'dev/**',
         ],
       },
     ],
