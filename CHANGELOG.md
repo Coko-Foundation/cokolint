@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://gitlab.coko.foundation///compare/v1.3.0...v1.4.0) (2021-01-09)
+
+
+### Features
+
+* **eslint:** allow devdepencies in dev folder, ignore dist folder ([55b30cc](https://gitlab.coko.foundation///commit/55b30cc4d4ca764339771a26354a783cb8690de6))
+
 ## [1.3.0](https://gitlab.coko.foundation///compare/v1.2.0...v1.3.0) (2020-12-13)
 
 
