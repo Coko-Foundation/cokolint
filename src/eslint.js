@@ -1,5 +1,11 @@
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
   env: {
     browser: true,
     es6: true,
@@ -13,10 +19,8 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:cypress/recommended',
     'prettier',
-    'prettier/react',
-    'prettier/standard',
   ],
-  plugins: ['jest', 'prettier'],
+  plugins: ['jest'],
   ignorePatterns: [
     '_build',
     'dist',
@@ -28,8 +32,10 @@ module.exports = {
     '!.lintstagedrc.js',
     '!.prettierrc.js',
     '!.stylelintrc.js',
+    '**/node_modules',
   ],
   rules: {
+    'arrow-body-style': 0,
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -37,12 +43,15 @@ module.exports = {
           // storybook
           '.storybook/*',
           '**/stories/**/*.js',
+
           // tests
           'cypress/**',
           '**/*.spec.js',
           '**/*.test.js',
+
           // webpack
           'webpack/**',
+
           // configs
           '.commitlintrc.js',
           '.cz-config.js',
@@ -51,6 +60,7 @@ module.exports = {
           '.lintstagedrc.js',
           '.prettierrc.js',
           '.stylelintrc.js',
+
           // other
           'dev/**',
         ],
@@ -74,8 +84,13 @@ module.exports = {
       { blankLine: 'always', prev: '*', next: 'multiline-const' },
       { blankLine: 'always', prev: 'multiline-const', next: '*' },
     ],
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
     'react/jsx-filename-extension': [2, { extensions: ['.js'] }], // disallows .jsx files
+    'react/jsx-props-no-spreading': 0,
     'react/jsx-sort-props': [1, { ignoreCase: true }],
     'react/prop-types': [
       2,
