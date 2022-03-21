@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v1.4.0...v2.0.0) (2022-03-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* husky needs a migration to hook files
+
+* upgrade dependencies ([7be266a](https://gitlab.coko.foundation/cokoapps/lint/commit/7be266af0d829af54b2d909040643c8439802d2e))
+
 ## [1.4.0](https://gitlab.coko.foundation///compare/v1.3.0...v1.4.0) (2021-01-09)
 
 
