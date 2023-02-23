@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.0.0...v2.0.1) (2023-02-23)
+
+
+### Bug Fixes
+
+* **eslint:** extend ESlint rules to files with the .jsx extension ([0bc0104](https://gitlab.coko.foundation/cokoapps/lint/commit/0bc01041bf366b757bd3aa06a279c74346bb42cf))
+
 ## [2.0.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v1.4.0...v2.0.0) (2022-03-21)
 
 
