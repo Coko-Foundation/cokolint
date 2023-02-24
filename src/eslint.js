@@ -6,6 +6,11 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
+  overrides: [
+    {
+      files: ['*.jsx'],
+    },
+  ],
   env: {
     browser: true,
     es6: true,
