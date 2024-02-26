@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.0.1...v2.1.0) (2024-02-26)
+
+
+### Features
+
+* add cli command for lint checks ([c912ce1](https://gitlab.coko.foundation/cokoapps/lint/commit/c912ce1343ccf92668dfa197f01bd6a9f82043a9))
+
+
+### Bug Fixes
+
+* add bin entry to package.json for cli ([3ecb2f5](https://gitlab.coko.foundation/cokoapps/lint/commit/3ecb2f5aa35039ff4e06d54782e3b49a9316ff48))
+
 ### [2.0.1](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.0.0...v2.0.1) (2023-02-23)
 
 
