@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.3](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* **eslint:** fix ecma version ([66f0ae8](https://gitlab.coko.foundation/cokoapps/lint/commit/66f0ae8a6d0d36d4e527f7d820445100df4231eb))
+
 ## [3.0.0-alpha.2](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2025-10-24)
 
 
