@@ -159,6 +159,7 @@ const server = [
     files: ['**/*.{js,mjs,ts}'],
     languageOptions: {
       globals: { ...globals.node },
+      ecmaVersion: 'latest',
     },
     plugins: {
       n: nodePlugin,
@@ -190,6 +191,9 @@ const server = [
 
   {
     files: ['**/*.mjs', '**/*.ts'],
+    languageOptions: {
+      sourceType: 'module',
+    },
     rules: {
       'no-restricted-globals': [
         'error',
@@ -203,26 +207,12 @@ const server = [
           message:
             'Do not use __filename in ES modules or TypeScript; use import.meta.url or path.resolve() instead.',
         },
-        {
-          name: 'isFinite',
-          message:
-            'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
-        },
-        {
-          name: 'isNaN',
-          message:
-            'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
-        },
       ],
     },
   },
 
   {
     files: ['**/*.mjs'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-    },
     rules: {
       ...nodePlugin.configs['flat/recommended-module'].rules,
     },
@@ -232,7 +222,6 @@ const server = [
     files: ['**/*.ts'],
     languageOptions: {
       parser: tseslint.parser,
-      sourceType: 'module',
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
