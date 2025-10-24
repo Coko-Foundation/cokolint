@@ -16,7 +16,7 @@
   "engines": {
     "node": "^22.16.0"
   },
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "bin": {
     "coko-lint": "./src/cli.js"
   },
