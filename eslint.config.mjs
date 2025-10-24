@@ -1,5 +1,5 @@
-import { defineEslintConfig, server } from './src/eslint.mjs'
+import { defineEslintConfig, serverEslintConfig } from './src/eslint.mjs'
 
-const config = defineEslintConfig(server)
+const config = defineEslintConfig(serverEslintConfig)
 
 export default config

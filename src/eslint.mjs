@@ -246,6 +246,7 @@ const server = [
   globalIgnores([
     '**/_build',
     '**/dist',
+    '**/docs',
     '!**/.storybook',
     '!**/.commitlintrc.js',
     '!**/.cz-config.js',
