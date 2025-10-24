@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.1.0...v3.0.0-alpha.0) (2025-10-24)
+
+
+### Features
+
+* **eslint:** typescript support and drop airbnb for server ([8eaa3c6](https://gitlab.coko.foundation/cokoapps/lint/commit/8eaa3c68dfd666e86215d80ed94bd0a2081209e1))
+
 ## [2.1.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.0.1...v2.1.0) (2024-02-26)
 
 
