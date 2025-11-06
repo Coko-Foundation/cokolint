@@ -10,6 +10,7 @@ import tseslint from 'typescript-eslint'
 
 import nodePlugin from 'eslint-plugin-n'
 import importPlugin from 'eslint-plugin-import'
+import vitest from '@vitest/eslint-plugin'
 // import jest from 'eslint-plugin-jest'
 // import cypressPlugin from 'eslint-plugin-cypress'
 
@@ -120,11 +121,14 @@ const commonRules = {
         // storybook
         '.storybook/*',
         '**/stories/**/*.js',
+        '**/stories/**/*.ts',
 
         // tests
         'cypress/**',
         '**/*.spec.js',
+        '**/*.spec.ts',
         '**/*.test.js',
+        '**/*.test.ts',
         '**/__tests__/**/*',
         '**/vitest.config.*',
 
@@ -133,12 +137,25 @@ const commonRules = {
 
         // configs
         '.commitlintrc.js',
+        '.commitlintrc.ts',
+        '.commitlintrc.mjs',
         '.cz-config.js',
+        '.cz-config.ts',
+        '.cz-config.mjs',
         '.jest.config.js',
+        '.jest.config.ts',
+        '.jest.config.mjs',
         '.lintstagedrc.js',
+        '.lintstagedrc.ts',
+        '.lintstagedrc.mjs',
         '.prettierrc.js',
+        '.prettierrc.ts',
+        '.prettierrc.mjs',
         '.stylelintrc.js',
+        '.stylelintrc.ts',
+        '.stylelintrc.mjs',
         'eslint.config.js',
+        'eslint.config.ts',
         'eslint.config.mjs',
 
         // other
@@ -236,6 +253,21 @@ const server = [
 
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
+    },
+  },
+
+  {
+    files: ['**/__tests__/**/*.test.ts'],
+    plugins: {
+      vitest,
+    },
+    settings: {
+      vitest: {
+        typecheck: true,
+      },
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
     },
   },
 
