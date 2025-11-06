@@ -261,11 +261,11 @@ const server = [
     plugins: {
       vitest,
     },
-    settings: {
-      vitest: {
-        typecheck: true,
-      },
-    },
+    // settings: {
+    //   vitest: {
+    //     typecheck: true,
+    //   },
+    // },
     rules: {
       ...vitest.configs.recommended.rules,
     },
