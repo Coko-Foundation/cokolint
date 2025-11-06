@@ -87,7 +87,6 @@ const commonRules = {
   'no-template-curly-in-string': 'warn',
   'no-throw-literal': 'error',
   'no-undef-init': 'warn',
-  'no-undefined': 'error',
   'no-unneeded-ternary': ['error', { defaultAssignment: false }],
   'no-unused-expressions': 'error',
   'no-useless-computed-key': 'error',
@@ -127,6 +126,7 @@ const commonRules = {
         '**/*.spec.js',
         '**/*.test.js',
         '**/__tests__/**/*',
+        '**/vitest.config.*',
 
         // webpack
         'webpack/**',
@@ -175,6 +175,7 @@ const server = [
     rules: {
       ...commonRules,
       'no-console': 'error',
+      // 'n/no-process-exit': 'off',
       'import/no-unresolved': ['error', { commonjs: true }],
     },
   },
@@ -189,27 +190,27 @@ const server = [
     },
   },
 
-  {
-    files: ['**/*.mjs', '**/*.ts'],
-    languageOptions: {
-      sourceType: 'module',
-    },
-    rules: {
-      'no-restricted-globals': [
-        'error',
-        {
-          name: '__dirname',
-          message:
-            'Do not use __dirname; use import.meta.url or process.cwd().',
-        },
-        {
-          name: '__filename',
-          message:
-            'Do not use __filename in ES modules or TypeScript; use import.meta.url or path.resolve() instead.',
-        },
-      ],
-    },
-  },
+  // {
+  //   files: ['**/*.mjs', '**/*.ts'],
+  //   languageOptions: {
+  //     sourceType: 'module',
+  //   },
+  //   rules: {
+  //     // 'no-restricted-globals': [
+  //     //   'error',
+  //     //   {
+  //     //     name: '__dirname',
+  //     //     message:
+  //     //       'Do not use __dirname; use import.meta.url or process.cwd().',
+  //     //   },
+  //     //   {
+  //     //     name: '__filename',
+  //     //     message:
+  //     //       'Do not use __filename in ES modules or TypeScript; use import.meta.url or path.resolve() instead.',
+  //     //   },
+  //     // ],
+  //   },
+  // },
 
   {
     files: ['**/*.mjs'],
@@ -229,6 +230,12 @@ const server = [
     rules: {
       ...tseslint.configs.recommended.rules,
       '@typescript-eslint/explicit-function-return-type': 'error',
+
+      'no-redeclare': 'off',
+      '@typescript-eslint/no-redeclare': 'error',
+
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
     },
   },
 

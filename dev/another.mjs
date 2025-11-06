@@ -4,4 +4,6 @@
 
 // console.log(pkg)
 
+// process.exit(1)
+
 // export const x = 'foo'
