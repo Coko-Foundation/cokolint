@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.6](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2025-11-06)
+
+
+### Features
+
+* **eslint:** add vitest plugin ([92a0f86](https://gitlab.coko.foundation/cokoapps/lint/commit/92a0f864f91b7a67b4c65de841757223290e1b63))
+
 ## [3.0.0-alpha.5](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2025-11-06)
 
 
