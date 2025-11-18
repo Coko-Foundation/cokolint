@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.8](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2025-11-18)
+
+
+### Bug Fixes
+
+* **eslint:** allow unused vars if they start with _ ([3f2fca0](https://gitlab.coko.foundation/cokoapps/lint/commit/3f2fca094ea69f9b5560f07851083bea637bd3ed))
+
 ## [3.0.0-alpha.7](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2025-11-06)
 
 
