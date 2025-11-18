@@ -252,7 +252,14 @@ const server = [
       '@typescript-eslint/no-redeclare': 'error',
 
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
     },
   },
 
