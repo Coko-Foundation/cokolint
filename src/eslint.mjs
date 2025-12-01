@@ -11,6 +11,7 @@ import tseslint from 'typescript-eslint'
 import nodePlugin from 'eslint-plugin-n'
 import importPlugin from 'eslint-plugin-import'
 import vitest from '@vitest/eslint-plugin'
+import workspaces from 'eslint-plugin-workspaces'
 // import jest from 'eslint-plugin-jest'
 // import cypressPlugin from 'eslint-plugin-cypress'
 
@@ -171,6 +172,14 @@ const commonRules = {
 const server = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
+
+  {
+    plugins: { workspaces },
+    rules: {
+      'workspaces/no-relative-imports': 'error',
+      'workspaces/require-dependency': 'warn',
+    },
+  },
 
   {
     files: ['**/*.{js,mjs,ts}'],
