@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.9](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2025-12-01)
+
+
+### Features
+
+* **eslint:** add workspaces plugin ([0bfb382](https://gitlab.coko.foundation/cokoapps/lint/commit/0bfb382057548895c92cd53282745457d8ba0b5e))
+
 ## [3.0.0-alpha.8](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2025-11-18)
 
 
