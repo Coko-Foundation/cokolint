@@ -284,6 +284,7 @@ const server = [
     // },
     rules: {
       ...vitest.configs.recommended.rules,
+      'vitest/no-focused-tests': ['error', { fixable: false }],
     },
   },
 
