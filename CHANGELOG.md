@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.10](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2025-12-02)
+
+
+### Bug Fixes
+
+* **eslint:** do not autofix vitest/no-focused-tests ([717897e](https://gitlab.coko.foundation/cokoapps/lint/commit/717897e1b072c651008c52ebddaf7df9cdbbdfb3))
+
 ## [3.0.0-alpha.9](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2025-12-01)
 
 
