@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
 /* eslint-disable no-console, n/no-process-exit */
 
 import { execSync } from 'child_process'
 import { program } from 'commander'
 
-const pkg = require('../package.json')
+import pkg from '../package.json' with { type: 'json' }
 
 const ESLINT = 'ESLint'
 const STYLELINT = 'Stylelint'
