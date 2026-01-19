@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.16](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2026-01-19)
+
+
+### Bug Fixes
+
+* include file extension for commitizen import ([3911856](https://gitlab.coko.foundation/cokoapps/lint/commit/3911856673e137136e1754563259c254f158a20d))
+
 ## [3.0.0-alpha.15](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.14...v3.0.0-alpha.15) (2026-01-19)
 
 
