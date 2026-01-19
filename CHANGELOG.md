@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.11](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.10...v3.0.0-alpha.11) (2026-01-19)
+
 ## [3.0.0-alpha.10](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2025-12-02)
 
 
