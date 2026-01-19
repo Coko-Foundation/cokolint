@@ -79,6 +79,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "type": "module",
   "packageManager": "yarn@4.10.3"
 }

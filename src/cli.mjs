@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /* eslint-disable no-console, n/no-process-exit */
 
 import { execSync } from 'child_process'

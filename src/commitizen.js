@@ -1,11 +1,11 @@
-import conventionalCommitTypes from 'conventional-commit-types' with {type: 'json'}
+const conventionalCommitTypes = require('conventional-commit-types')
 
 const { types } = conventionalCommitTypes
 const maxLength = Math.max(Object.keys(types).map(key => key.length)) + 1
 
 const choices = Object.keys(types).map(key => {
   const type = types[key]
-  const name = `${(`${key  }:`).padEnd(maxLength)} ${type.description}`
+  const name = `${`${key}:`.padEnd(maxLength)} ${type.description}`
 
   return {
     name,
@@ -14,7 +14,7 @@ const choices = Object.keys(types).map(key => {
 })
 
 // Check https://github.com/leonardoanalista/cz-customizable#options for more options
-export default {
+module.exports = {
   scopes: ['*'],
   skipQuestions: ['body', 'breaking', 'footer'],
   types: choices,
