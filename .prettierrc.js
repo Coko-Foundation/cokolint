@@ -1,3 +1,3 @@
-const prettier = require('./src/prettier')
+import prettier from './src/prettier.js'
 
-module.exports = prettier
+export default prettier

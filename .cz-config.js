@@ -1,4 +1,4 @@
-const commitizenConfig = require('./src/commitizen')
+import commitizenConfig from './src/commitizen.js'
 
 commitizenConfig.scopes = [
   'eslint',
@@ -9,4 +9,4 @@ commitizenConfig.scopes = [
   '*',
 ]
 
-module.exports = commitizenConfig
+export default commitizenConfig

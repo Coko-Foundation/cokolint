@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-console */
+/* eslint-disable no-console, n/no-process-exit */
 
-const { program } = require('commander')
-const { execSync } = require('child_process')
+import { execSync } from 'child_process'
+import { program } from 'commander'
 
 const pkg = require('../package.json')
 
@@ -70,7 +70,6 @@ const runAll = (options = {}) => {
     [runPrettier, PRETTIER, options.skipPrettier],
   ]
 
-  /* eslint-disable-next-line no-restricted-syntax */
   for (const process of processes) {
     try {
       runSubprocess(...process)

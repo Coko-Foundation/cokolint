@@ -1,8 +1,5 @@
-// import path from 'path'
-
 import { defineConfig, globalIgnores } from 'eslint/config'
 import js from '@eslint/js'
-// import { FlatCompat } from '@eslint/eslintrc'
 
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
@@ -14,16 +11,6 @@ import vitest from '@vitest/eslint-plugin'
 import workspaces from 'eslint-plugin-workspaces'
 // import jest from 'eslint-plugin-jest'
 // import cypressPlugin from 'eslint-plugin-cypress'
-
-// const __filename = fileURLToPath(import.meta.url)
-// const __dirname = path.dirname(__filename)
-
-// const compat = new FlatCompat({
-//   // baseDirectory: __dirname,
-//   resolvePluginsRelativeTo: import.meta.url,
-//   // recommendedConfig: js.configs.recommended,
-//   // allConfig: js.configs.all,
-// })
 
 /**
  * TO DO
