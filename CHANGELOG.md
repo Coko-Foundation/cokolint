@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.13](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.12...v3.0.0-alpha.13) (2026-01-19)
+
+
+### Bug Fixes
+
+* fix cli path in package.json ([e7dae84](https://gitlab.coko.foundation/cokoapps/lint/commit/e7dae84139742c11bab104e0e7c4bece95964c50))
+
 ## [3.0.0-alpha.12](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.11...v3.0.0-alpha.12) (2026-01-19)
 
 ## [3.0.0-alpha.11](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.10...v3.0.0-alpha.11) (2026-01-19)
