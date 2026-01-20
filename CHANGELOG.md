@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.17](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2026-01-20)
+
+
+### Features
+
+* add lint-staged and commit commands ([dcff789](https://gitlab.coko.foundation/cokoapps/lint/commit/dcff78993000a4df6ef0e35f67057d5de05682d7))
+
 ## [3.0.0-alpha.16](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2026-01-19)
 
 
