@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.18](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.17...v3.0.0-alpha.18) (2026-01-20)
+
+
+### Bug Fixes
+
+* fix commit command ([9934d20](https://gitlab.coko.foundation/cokoapps/lint/commit/9934d2075bfea115265400df4d6be864f1f8eed8))
+
 ## [3.0.0-alpha.17](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2026-01-20)
 
 
