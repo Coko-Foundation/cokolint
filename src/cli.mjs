@@ -1,11 +1,20 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-console, n/no-process-exit */
+/* eslint-disable n/no-process-exit */
 
-import { execSync } from 'child_process'
+import { execSync } from 'node:child_process'
+import path from 'node:path'
+import { createRequire } from 'node:module'
+
 import { program } from 'commander'
+import lintStagedLib from 'lint-staged'
 
 import pkg from '../package.json' with { type: 'json' }
+import logger from './logger.mjs'
+
+const require = createRequire(import.meta.url)
+const cz = require('commitizen/dist/cli/git-cz')
+const czPath = require.resolve('commitizen')
 
 const ESLINT = 'ESLint'
 const STYLELINT = 'Stylelint'
@@ -14,16 +23,16 @@ const filler = '>>>> '
 
 // #region actions
 const printVersion = () => {
-  console.log(`Coko lint version: ${program.version()}`)
+  logger.info(`Coko lint version: ${program.version()}\n`)
 }
 
 const runCommand = (name, command, isSubprocess) => {
-  console.log(`\n${filler}Running ${name}...`)
+  logger.info(`\n${filler}Running ${name}...`)
 
   try {
     execSync(command, { stdio: 'inherit' })
   } catch (error) {
-    console.error(`Error running ${name}: ${error.message}`)
+    logger.error(`Error running ${name}: ${error.message}`)
 
     if (isSubprocess) {
       throw new Error()
@@ -36,7 +45,7 @@ const runCommand = (name, command, isSubprocess) => {
 const runSubprocess = (fn, name, skip) => {
   try {
     if (skip) {
-      console.log(`\n${filler}Skipping ${name}...`)
+      logger.info(`\n${filler}Skipping ${name}...`)
       return
     }
 
@@ -79,11 +88,40 @@ const runAll = (options = {}) => {
   }
 
   if (hasErrors) {
-    console.error('\nError: Linting checks did not pass!')
+    logger.error('\nError: Linting checks did not pass!')
     process.exit(1)
   }
 
-  console.log(`\nLinting checks successfully passed`)
+  logger.info(`\nLinting checks successfully passed`)
+}
+
+const lintStaged = async options => {
+  const jsArray = ['eslint']
+  if (!options.skipStylelint) jsArray.push('stylelint')
+
+  const success = await lintStagedLib({
+    cwd: process.cwd(),
+    config: {
+      '*.{js,mjs}': jsArray,
+      '*.{js,graphql,json,yml,md,html}': ['prettier --check'],
+    },
+  })
+
+  logger.newLine()
+  if (!success) throw new Error('Lint staged failed!')
+  logger.info('Lint staged successfully completed')
+}
+
+const commit = async options => {
+  execSync('git add -A', { stdio: 'inherit' })
+  execSync('git status', { stdio: 'inherit' })
+
+  await lintStaged(options)
+  logger.newLine()
+
+  cz.bootstrap({
+    cliPath: path.join(czPath, '..', '..'),
+  })
 }
 // #endregion actions
 
@@ -125,6 +163,32 @@ program
   .action(options => {
     printVersion()
     runAll(options)
+  })
+
+program
+  .command('lint-staged')
+  .description('Lint staged files')
+  .option('--skip-stylelint', 'Skip stylelint')
+  .action(async options => {
+    try {
+      printVersion()
+      await lintStaged(options)
+    } catch (e) {
+      throw new Error(e)
+    }
+  })
+
+program
+  .command('commit')
+  .description('Launch interactive commit builder')
+  .option('--skip-stylelint', 'Skip stylelint')
+  .action(async options => {
+    try {
+      printVersion()
+      await commit(options)
+    } catch (e) {
+      throw new Error(e)
+    }
   })
 
 program.parse(process.argv)
