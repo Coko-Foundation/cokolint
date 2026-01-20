@@ -24,7 +24,7 @@
     "src"
   ],
   "scripts": {
-    "cz": "git-cz",
+    "commit": "./src/cli.mjs commit --skip-stylelint",
     "prepare": "husky install",
     "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"

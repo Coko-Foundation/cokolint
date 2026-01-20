@@ -119,6 +119,12 @@ const commit = async options => {
   await lintStaged(options)
   logger.newLine()
 
+  // filter out
+  // - the 'commit' command
+  // - the --skip-stylelint flag
+  // if we don't do this, cz will pass them onto git (which will throw)
+  process.argv = process.argv.slice(0, 2)
+
   cz.bootstrap({
     cliPath: path.join(czPath, '..', '..'),
   })
