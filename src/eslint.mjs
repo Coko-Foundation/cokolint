@@ -3,12 +3,17 @@ import js from '@eslint/js'
 
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-// import babelParser from '@babel/eslint-parser'
+import importPlugin from 'eslint-plugin-import'
+import workspaces from 'eslint-plugin-workspaces'
 
 import nodePlugin from 'eslint-plugin-n'
-import importPlugin from 'eslint-plugin-import'
+
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import confusingBrowserGlobals from 'confusing-browser-globals'
+
 import vitest from '@vitest/eslint-plugin'
-import workspaces from 'eslint-plugin-workspaces'
 // import jest from 'eslint-plugin-jest'
 // import cypressPlugin from 'eslint-plugin-cypress'
 
@@ -19,17 +24,8 @@ import workspaces from 'eslint-plugin-workspaces'
  * jest
  * cypress
  *
- * => client
- * no console
- * jsx a11y
- * airbnb react
- * react recommended
- * react hooks
- * confusing-browser-globals
- *
  * => drop dependencies
  * airbnb
- * @eslint/eslintrc (if not using flat compat)
  * babel eslint parser
  *
  */
@@ -156,17 +152,75 @@ const commonRules = {
   'import/order': ['error', { groups: [['builtin', 'external', 'internal']] }],
 }
 
+const workspacesConfig = {
+  plugins: { workspaces },
+  rules: {
+    'workspaces/no-relative-imports': 'error',
+    'workspaces/require-dependency': 'warn',
+  },
+}
+
+const typescriptConfig = {
+  files: ['**/*.{ts,tsx}'],
+  languageOptions: {
+    parser: tseslint.parser,
+  },
+  plugins: {
+    '@typescript-eslint': tseslint.plugin,
+  },
+  rules: {
+    ...tseslint.configs.recommended.rules,
+    '@typescript-eslint/explicit-function-return-type': 'error',
+
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': 'error',
+
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+  },
+}
+
+const viteConfig = {
+  files: ['**/__tests__/**/*.test.ts'],
+  plugins: {
+    vitest,
+  },
+  // settings: {
+  //   vitest: {
+  //     typecheck: true,
+  //   },
+  // },
+  rules: {
+    ...vitest.configs.recommended.rules,
+    'vitest/no-focused-tests': ['error', { fixable: false }],
+  },
+}
+
+const globalIgnoreList = [
+  '**/_build',
+  '**/dist',
+  '**/docs',
+  '!**/.storybook',
+  '!**/.commitlintrc.js',
+  '!**/.cz-config.js',
+  '!**/.jest.config.js',
+  '!**/.lintstagedrc.js',
+  '!**/.prettierrc.js',
+  '!**/.stylelintrc.js',
+  '**/node_modules',
+]
+
 const server = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
-
-  {
-    plugins: { workspaces },
-    rules: {
-      'workspaces/no-relative-imports': 'error',
-      'workspaces/require-dependency': 'warn',
-    },
-  },
+  workspacesConfig,
 
   {
     files: ['**/*.{js,mjs,ts}'],
@@ -203,28 +257,6 @@ const server = [
     },
   },
 
-  // {
-  //   files: ['**/*.mjs', '**/*.ts'],
-  //   languageOptions: {
-  //     sourceType: 'module',
-  //   },
-  //   rules: {
-  //     // 'no-restricted-globals': [
-  //     //   'error',
-  //     //   {
-  //     //     name: '__dirname',
-  //     //     message:
-  //     //       'Do not use __dirname; use import.meta.url or process.cwd().',
-  //     //   },
-  //     //   {
-  //     //     name: '__filename',
-  //     //     message:
-  //     //       'Do not use __filename in ES modules or TypeScript; use import.meta.url or path.resolve() instead.',
-  //     //   },
-  //     // ],
-  //   },
-  // },
-
   {
     files: ['**/*.mjs'],
     rules: {
@@ -232,62 +264,54 @@ const server = [
     },
   },
 
-  {
-    files: ['**/*.ts'],
-    languageOptions: {
-      parser: tseslint.parser,
-    },
-    plugins: {
-      '@typescript-eslint': tseslint.plugin,
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      '@typescript-eslint/explicit-function-return-type': 'error',
-
-      'no-redeclare': 'off',
-      '@typescript-eslint/no-redeclare': 'error',
-
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
-        },
-      ],
-    },
-  },
-
-  {
-    files: ['**/__tests__/**/*.test.ts'],
-    plugins: {
-      vitest,
-    },
-    // settings: {
-    //   vitest: {
-    //     typecheck: true,
-    //   },
-    // },
-    rules: {
-      ...vitest.configs.recommended.rules,
-      'vitest/no-focused-tests': ['error', { fixable: false }],
-    },
-  },
-
-  globalIgnores([
-    '**/_build',
-    '**/dist',
-    '**/docs',
-    '!**/.storybook',
-    '!**/.commitlintrc.js',
-    '!**/.cz-config.js',
-    '!**/.jest.config.js',
-    '!**/.lintstagedrc.js',
-    '!**/.prettierrc.js',
-    '!**/.stylelintrc.js',
-    '**/node_modules',
-  ]),
+  typescriptConfig,
+  viteConfig,
+  globalIgnores(globalIgnoreList),
 ]
 
-export { defineConfig as defineEslintConfig, server as serverEslintConfig }
+const client = [
+  js.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  workspacesConfig,
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
+  reactHooks.configs.flat.recommended,
+  jsxA11y.flatConfigs.recommended,
+
+  {
+    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser },
+      ecmaVersion: 'latest',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    settings: {
+      'import/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+    },
+    rules: {
+      ...commonRules,
+      'no-console': ['error', { allow: ['warn', 'error'] }],
+      'import/no-unresolved': 'error',
+      'react/jsx-sort-props': [1, { ignoreCase: true }],
+      'no-restricted-globals': ['error'].concat(confusingBrowserGlobals),
+    },
+  },
+
+  typescriptConfig,
+  viteConfig,
+  globalIgnores(globalIgnoreList),
+]
+
+export {
+  defineConfig as defineEslintConfig,
+  server as serverEslintConfig,
+  client as createClientConfig,
+}

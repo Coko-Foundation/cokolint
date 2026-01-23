@@ -322,6 +322,7 @@ __metadata:
     chalk: "npm:^5.6.2"
     commander: "npm:^14.0.2"
     commitizen: "npm:^4.3.1"
+    confusing-browser-globals: "npm:^1.0.11"
     conventional-commit-types: "npm:^3.0.0"
     cz-conventional-changelog: "npm:^3.3.0"
     cz-customizable: "npm:^7.5.1"
@@ -1978,6 +1979,13 @@ __metadata:
   version: 0.1.8
   resolution: "confbox@npm:0.1.8"
   checksum: 10c0/fc2c68d97cb54d885b10b63e45bd8da83a8a71459d3ecf1825143dd4c7f9f1b696b3283e07d9d12a144c1301c2ebc7842380bdf0014e55acc4ae1c9550102418
+  languageName: node
+  linkType: hard
+
+"confusing-browser-globals@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "confusing-browser-globals@npm:1.0.11"
+  checksum: 10c0/475d0a284fa964a5182b519af5738b5b64bf7e413cfd703c1b3496bf6f4df9f827893a9b221c0ea5873c1476835beb1e0df569ba643eff0734010c1eb780589e
   languageName: node
   linkType: hard
 
