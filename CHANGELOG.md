@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.20](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.19...v3.0.0-alpha.20) (2026-01-26)
+
+
+### Bug Fixes
+
+* **eslint:** export client config ([5d4df78](https://gitlab.coko.foundation/cokoapps/lint/commit/5d4df78d62005544afc2143e83ca951ddad07c56))
+
 ## [3.0.0-alpha.19](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2026-01-23)
 
 
