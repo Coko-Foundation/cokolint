@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.21](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2026-01-26)
+
+
+### Bug Fixes
+
+* **eslint:** no extensions for jsx/tsx files ([25ec578](https://gitlab.coko.foundation/cokoapps/lint/commit/25ec5782e79c2960a56d5416a995093148f90411))
+
 ## [3.0.0-alpha.20](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.19...v3.0.0-alpha.20) (2026-01-26)
 
 
