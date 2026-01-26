@@ -313,5 +313,5 @@ const client = [
 export {
   defineConfig as defineEslintConfig,
   server as serverEslintConfig,
-  client as createClientConfig,
+  client as clientEslintConfig,
 }
