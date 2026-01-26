@@ -93,7 +93,9 @@ const commonRules = {
     'ignorePackages',
     {
       js: 'never',
+      jsx: 'never',
       ts: 'never',
+      tsx: 'never',
     },
   ],
   'import/no-absolute-path': 'error',
@@ -104,8 +106,7 @@ const commonRules = {
       devDependencies: [
         // storybook
         '.storybook/*',
-        '**/stories/**/*.js',
-        '**/stories/**/*.ts',
+        '**/stories/**/*',
 
         // tests
         'cypress/**',
@@ -115,9 +116,6 @@ const commonRules = {
         '**/*.test.ts',
         '**/__tests__/**/*',
         '**/vitest.config.*',
-
-        // webpack
-        'webpack/**',
 
         // configs
         '.commitlintrc.js',
