@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.23](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2026-02-03)
+
+
+### Bug Fixes
+
+* fix position of react detect setting in object ([eb81055](https://gitlab.coko.foundation/cokoapps/lint/commit/eb81055ada1dd3f11cc161640491a93455c4e13f))
+
 ## [3.0.0-alpha.22](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2026-02-03)
 
 
