@@ -292,9 +292,9 @@ const client = [
         typescript: {
           alwaysTryTypes: true,
         },
-        react: {
-          version: 'detect',
-        },
+      },
+      react: {
+        version: 'detect',
       },
     },
     rules: {
