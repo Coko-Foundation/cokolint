@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.22](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2026-02-03)
+
+
+### Features
+
+* **eslint:** detect react version ([3f5d4fe](https://gitlab.coko.foundation/cokoapps/lint/commit/3f5d4fe1c64fa0bd455d56f386ee646030b5917e))
+
 ## [3.0.0-alpha.21](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2026-01-26)
 
 
