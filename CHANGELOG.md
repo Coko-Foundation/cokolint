@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.24](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.23...v3.0.0-alpha.24) (2026-02-04)
+
+
+### Features
+
+* **eslint:** add process to client globals ([4e12d2d](https://gitlab.coko.foundation/cokoapps/lint/commit/4e12d2d3c892636297516e6ca6c8afa24076d276))
+
 ## [3.0.0-alpha.23](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2026-02-03)
 
 
