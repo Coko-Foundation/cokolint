@@ -279,7 +279,10 @@ const client = [
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     languageOptions: {
-      globals: { ...globals.browser },
+      globals: {
+        ...globals.browser,
+        process: 'readonly',
+      },
       ecmaVersion: 'latest',
       parserOptions: {
         ecmaFeatures: {
