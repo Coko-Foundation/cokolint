@@ -61,7 +61,7 @@ const runESLint = isSubprocess => {
 }
 
 const runStylelint = isSubprocess => {
-  const command = `npx stylelint "${process.cwd()}/**/*.js"`
+  const command = `npx stylelint "${process.cwd()}/**/*.{js,jsx,ts,tsx,css}"`
   runCommand(STYLELINT, command, isSubprocess)
 }
 
