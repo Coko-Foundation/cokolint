@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.25](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.24...v3.0.0-alpha.25) (2026-04-23)
+
+
+### Features
+
+* **eslint:** add root config with cypress plugin ([6078f5b](https://gitlab.coko.foundation/cokoapps/lint/commit/6078f5bf6e451903738a8eda6f288b7f52ee3877))
+* **eslint:** enable the eslint plugin promises config ([00a6f56](https://gitlab.coko.foundation/cokoapps/lint/commit/00a6f5644eb4f4c371577abdcf4e869383faae0d))
+* **stylelint:** modern stylelint configuration ([9741171](https://gitlab.coko.foundation/cokoapps/lint/commit/974117104009e9b3a254b9539d8082198d68553c))
+
 ## [3.0.0-alpha.24](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.23...v3.0.0-alpha.24) (2026-02-04)
 
 
