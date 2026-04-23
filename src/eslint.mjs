@@ -5,7 +5,7 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import importPlugin from 'eslint-plugin-import'
 import workspaces from 'eslint-plugin-workspaces'
-
+import pluginPromise from 'eslint-plugin-promise'
 import nodePlugin from 'eslint-plugin-n'
 
 import react from 'eslint-plugin-react'
@@ -214,6 +214,7 @@ const globalIgnoreList = [
 const server = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
+  pluginPromise.configs['flat/recommended'],
   workspacesConfig,
 
   {
@@ -266,6 +267,7 @@ const server = [
 const client = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
+  pluginPromise.configs['flat/recommended'],
   workspacesConfig,
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
