@@ -1,6 +1,5 @@
 import { defineConfig, globalIgnores } from 'eslint/config'
 import js from '@eslint/js'
-
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import importPlugin from 'eslint-plugin-import'
@@ -8,27 +7,11 @@ import workspaces from 'eslint-plugin-workspaces'
 import pluginPromise from 'eslint-plugin-promise'
 import nodePlugin from 'eslint-plugin-n'
 import pluginCypress from 'eslint-plugin-cypress'
-
+import vitest from '@vitest/eslint-plugin'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import confusingBrowserGlobals from 'confusing-browser-globals'
-
-import vitest from '@vitest/eslint-plugin'
-// import jest from 'eslint-plugin-jest'
-
-/**
- * TO DO
- *
- * explicit rules from old config
- * jest
- * cypress
- *
- * => drop dependencies
- * airbnb
- * babel eslint parser
- *
- */
 
 const commonRules = {
   'array-callback-return': 'error',
@@ -121,9 +104,6 @@ const commonRules = {
         '.cz-config.js',
         '.cz-config.ts',
         '.cz-config.mjs',
-        '.jest.config.js',
-        '.jest.config.ts',
-        '.jest.config.mjs',
         '.lintstagedrc.js',
         '.lintstagedrc.ts',
         '.lintstagedrc.mjs',
@@ -204,7 +184,6 @@ const globalIgnoreList = [
   '**/docs',
   '!**/.storybook',
   '!**/.cz-config.js',
-  '!**/.jest.config.js',
   '!**/.lintstagedrc.js',
   '!**/.prettierrc.js',
   '!**/.stylelintrc.js',
