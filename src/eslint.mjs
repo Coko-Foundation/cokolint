@@ -7,6 +7,7 @@ import importPlugin from 'eslint-plugin-import'
 import workspaces from 'eslint-plugin-workspaces'
 import pluginPromise from 'eslint-plugin-promise'
 import nodePlugin from 'eslint-plugin-n'
+import pluginCypress from 'eslint-plugin-cypress'
 
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -15,7 +16,6 @@ import confusingBrowserGlobals from 'confusing-browser-globals'
 
 import vitest from '@vitest/eslint-plugin'
 // import jest from 'eslint-plugin-jest'
-// import cypressPlugin from 'eslint-plugin-cypress'
 
 /**
  * TO DO
@@ -312,8 +312,18 @@ const client = [
   globalIgnores(globalIgnoreList),
 ]
 
+const root = [
+  ...server,
+
+  {
+    files: ['cypress/**/*.{js,mjs,ts}'],
+    extends: [pluginCypress.configs.recommended],
+  },
+]
+
 export {
   defineConfig as defineEslintConfig,
   server as serverEslintConfig,
   client as clientEslintConfig,
+  root as rootEslintConfig,
 }
