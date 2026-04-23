@@ -118,9 +118,6 @@ const commonRules = {
         '**/vitest.config.*',
 
         // configs
-        '.commitlintrc.js',
-        '.commitlintrc.ts',
-        '.commitlintrc.mjs',
         '.cz-config.js',
         '.cz-config.ts',
         '.cz-config.mjs',
@@ -206,7 +203,6 @@ const globalIgnoreList = [
   '**/dist',
   '**/docs',
   '!**/.storybook',
-  '!**/.commitlintrc.js',
   '!**/.cz-config.js',
   '!**/.jest.config.js',
   '!**/.lintstagedrc.js',

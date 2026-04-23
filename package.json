@@ -35,8 +35,6 @@
     }
   },
   "dependencies": {
-    "@commitlint/cli": "^20.3.1",
-    "@commitlint/config-conventional": "^20.3.1",
     "@eslint/js": "^9.39.2",
     "@vitest/eslint-plugin": "^1.6.6",
     "chalk": "^5.6.2",
@@ -57,7 +55,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-workspaces": "^0.11.1",
     "globals": "^17.0.0",
-    "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "postcss": "^8.5.6",
     "postcss-styled-syntax": "^0.7.1",
