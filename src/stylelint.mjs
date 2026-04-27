@@ -12,5 +12,6 @@ export default {
     'declaration-block-no-duplicate-properties': true,
     'declaration-no-important': true,
     'no-descending-specificity': null,
+    'no-empty-source': false,
   },
 }
