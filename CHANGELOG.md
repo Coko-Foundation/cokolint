@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.27](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2026-04-27)
+
+
+### Bug Fixes
+
+* **stylelint:** properly disable rule ([24c16b6](https://gitlab.coko.foundation/cokoapps/lint/commit/24c16b619d431f26c33d33268cb4f085a859cc1b))
+
 ## [3.0.0-alpha.26](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.25...v3.0.0-alpha.26) (2026-04-27)
 
 
