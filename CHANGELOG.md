@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.28](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2026-04-28)
+
+
+### Bug Fixes
+
+* **eslint:** fix cz config issues on the client side ([11f92ed](https://gitlab.coko.foundation/cokoapps/lint/commit/11f92ed65f709a9e8a69012b91b5d8d0b72d0288))
+
 ## [3.0.0-alpha.27](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2026-04-27)
 
 
