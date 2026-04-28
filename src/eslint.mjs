@@ -104,6 +104,7 @@ const commonRules = {
         '.cz-config.js',
         '.cz-config.ts',
         '.cz-config.mjs',
+        '.cz-config.cjs',
         '.lintstagedrc.js',
         '.lintstagedrc.ts',
         '.lintstagedrc.mjs',
@@ -184,6 +185,7 @@ const globalIgnoreList = [
   '**/docs',
   '!**/.storybook',
   '!**/.cz-config.js',
+  '!**/.cz-config.cjs',
   '!**/.lintstagedrc.js',
   '!**/.prettierrc.js',
   '!**/.stylelintrc.js',
@@ -284,6 +286,11 @@ const client = [
       'react/jsx-sort-props': [1, { ignoreCase: true }],
       'no-restricted-globals': ['error'].concat(confusingBrowserGlobals),
     },
+  },
+
+  {
+    files: ['**/*.cjs'],
+    languageOptions: { sourceType: 'commonjs' },
   },
 
   typescriptConfig,
