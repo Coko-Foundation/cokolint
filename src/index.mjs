@@ -5,6 +5,7 @@ import {
   defineEslintConfig,
   serverEslintConfig,
   clientEslintConfig,
+  rootEslintConfig,
 } from './eslint.mjs'
 
 import prettier from './prettier.mjs'
@@ -15,6 +16,7 @@ export {
   defineEslintConfig,
   serverEslintConfig,
   clientEslintConfig,
+  rootEslintConfig,
   stylelint,
   prettier,
   commitizen,

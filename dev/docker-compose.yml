@@ -1,0 +1,6 @@
+services:
+  client:
+    build:
+      context: .
+      dockerfile: ./dev/client/Dockerfile-client-development
+    command: ['node', './scripts/coko-client-dev.mjs']
