@@ -1,6 +1,6 @@
 {
   "name": "@coko/lint",
-  "version": "3.0.0-alpha.28",
+  "version": "3.0.0-alpha.29",
   "description": "Linter configurations and dependencies for coko's projects",
   "keywords": [
     "lint",
