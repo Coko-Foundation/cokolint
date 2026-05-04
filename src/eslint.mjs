@@ -321,17 +321,17 @@ const root = [
    */
   {
     ...serverFiles,
-    ignores: ['packages/client/**', 'cypress'],
+    ignores: ['packages/client/**', 'cypress/**'],
   },
 
   {
     ...serverCommonjs,
-    ignores: ['packages/client/**', 'cypress'],
+    ignores: ['packages/client/**', 'cypress/**'],
   },
 
   {
     ...serverMjs,
-    ignores: ['packages/client/**', 'cypress'],
+    ignores: ['packages/client/**', 'cypress/**'],
   },
 
   /**
@@ -343,6 +343,9 @@ const root = [
     extends: [pluginCypress.configs.recommended],
     languageOptions: {
       sourceType: 'module',
+      globals: {
+        ...globals.browser,
+      },
     },
   },
 
