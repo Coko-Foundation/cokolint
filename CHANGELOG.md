@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.30](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2026-05-04)
+
+
+### Features
+
+* allow passing path to the lint commands ([dd7a355](https://gitlab.coko.foundation/cokoapps/lint/commit/dd7a35561e0757f03d11d192f60b43834a63ce56))
+
 ## [3.0.0-alpha.29](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2026-04-29)
 
 
