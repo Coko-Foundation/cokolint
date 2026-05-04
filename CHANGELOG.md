@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.33](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** make sure server rules do not bleed into client ([2291bcd](https://gitlab.coko.foundation/cokoapps/lint/commit/2291bcd5073b1e5f3bad9efd08a15f1f1c9f098e))
+
 ## [3.0.0-alpha.32](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2026-05-04)
 
 
