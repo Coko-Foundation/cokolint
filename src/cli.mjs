@@ -55,18 +55,23 @@ const runSubprocess = (fn, name, skip) => {
   }
 }
 
-const runESLint = isSubprocess => {
-  const command = `npx eslint ${process.cwd()}`
+const runESLint = (isSubprocess, targetPath) => {
+  const target = targetPath ?? process.cwd()
+  const command = `npx eslint ${target}`
   runCommand(ESLINT, command, isSubprocess)
 }
 
-const runStylelint = isSubprocess => {
-  const command = `npx stylelint "${process.cwd()}/**/*.{js,jsx,ts,tsx,css}"`
+const runStylelint = (isSubprocess, targetPath) => {
+  const target = targetPath
+    ? `"${targetPath}/**/*.{js,jsx,ts,tsx,css}"`
+    : `"${process.cwd()}/**/*.{js,jsx,ts,tsx,css}"`
+  const command = `npx stylelint ${target}`
   runCommand(STYLELINT, command, isSubprocess)
 }
 
-const runPrettier = isSubprocess => {
-  const command = `npx prettier --check ${process.cwd()}`
+const runPrettier = (isSubprocess, targetPath) => {
+  const target = targetPath ?? process.cwd()
+  const command = `npx prettier --check ${target}`
   runCommand(PRETTIER, command, isSubprocess)
 }
 
@@ -137,27 +142,27 @@ program
   .description("Coko's cli tool for running linters")
 
 program
-  .command('eslint')
+  .command('eslint [path]')
   .description('Run eslint command')
-  .action(() => {
+  .action(targetPath => {
     printVersion()
-    runESLint()
+    runESLint(false, targetPath)
   })
 
 program
-  .command('stylelint')
+  .command('stylelint [path]')
   .description('Run stylelint command')
-  .action(() => {
+  .action(targetPath => {
     printVersion()
-    runStylelint()
+    runStylelint(false, targetPath)
   })
 
 program
-  .command('prettier')
+  .command('prettier [path]')
   .description('Run prettier command')
-  .action(() => {
+  .action(targetPath => {
     printVersion()
-    runPrettier()
+    runPrettier(false, targetPath)
   })
 
 program
