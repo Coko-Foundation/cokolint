@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.36](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** fix cypress pattern and add browser globals to pattern ([5784998](https://gitlab.coko.foundation/cokoapps/lint/commit/57849987886257f769ec115d85570b3a27d5152f))
+
 ## [3.0.0-alpha.35](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2026-05-04)
 
 
