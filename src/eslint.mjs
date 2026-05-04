@@ -192,53 +192,95 @@ const globalIgnoreList = [
   '**/node_modules',
 ]
 
+const serverFiles = {
+  files: ['**/*.{js,mjs,ts}'],
+  languageOptions: {
+    globals: { ...globals.node },
+    ecmaVersion: 'latest',
+  },
+  plugins: {
+    n: nodePlugin,
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+    n: { tryExtensions: ['.js', '.ts'] },
+  },
+  rules: {
+    ...commonRules,
+    'no-console': 'error',
+    // 'n/no-process-exit': 'off',
+    'import/no-unresolved': ['error', { commonjs: true }],
+  },
+}
+
+const serverCommonjs = {
+  files: ['**/*.js'],
+  languageOptions: {
+    sourceType: 'commonjs',
+  },
+  rules: {
+    ...nodePlugin.configs['flat/recommended-script'].rules,
+  },
+}
+
+const serverMjs = {
+  files: ['**/*.mjs'],
+  rules: {
+    ...nodePlugin.configs['flat/recommended-module'].rules,
+  },
+}
+
+const clientFiles = {
+  files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      process: 'readonly',
+    },
+    ecmaVersion: 'latest',
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+    react: {
+      version: 'detect',
+    },
+  },
+  rules: {
+    ...commonRules,
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'import/no-unresolved': 'error',
+    'react/jsx-sort-props': [1, { ignoreCase: true }],
+    'no-restricted-globals': ['error'].concat(confusingBrowserGlobals),
+  },
+}
+
+const clientCommonjs = {
+  files: ['**/*.cjs'],
+  languageOptions: { sourceType: 'commonjs' },
+}
+
 const server = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   pluginPromise.configs['flat/recommended'],
   workspacesConfig,
 
-  {
-    files: ['**/*.{js,mjs,ts}'],
-    languageOptions: {
-      globals: { ...globals.node },
-      ecmaVersion: 'latest',
-    },
-    plugins: {
-      n: nodePlugin,
-    },
-    settings: {
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
-      n: { tryExtensions: ['.js', '.ts'] },
-    },
-    rules: {
-      ...commonRules,
-      'no-console': 'error',
-      // 'n/no-process-exit': 'off',
-      'import/no-unresolved': ['error', { commonjs: true }],
-    },
-  },
-
-  {
-    files: ['**/*.js'],
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
-    rules: {
-      ...nodePlugin.configs['flat/recommended-script'].rules,
-    },
-  },
-
-  {
-    files: ['**/*.mjs'],
-    rules: {
-      ...nodePlugin.configs['flat/recommended-module'].rules,
-    },
-  },
+  serverFiles,
+  serverCommonjs,
+  serverMjs,
 
   typescriptConfig,
   viteConfig,
@@ -250,48 +292,14 @@ const client = [
   importPlugin.flatConfigs.recommended,
   pluginPromise.configs['flat/recommended'],
   workspacesConfig,
+
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
   reactHooks.configs.flat.recommended,
   jsxA11y.flatConfigs.recommended,
 
-  {
-    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        process: 'readonly',
-      },
-      ecmaVersion: 'latest',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    settings: {
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
-      react: {
-        version: 'detect',
-      },
-    },
-    rules: {
-      ...commonRules,
-      'no-console': ['error', { allow: ['warn', 'error'] }],
-      'import/no-unresolved': 'error',
-      'react/jsx-sort-props': [1, { ignoreCase: true }],
-      'no-restricted-globals': ['error'].concat(confusingBrowserGlobals),
-    },
-  },
-
-  {
-    files: ['**/*.cjs'],
-    languageOptions: { sourceType: 'commonjs' },
-  },
+  clientFiles,
+  clientCommonjs,
 
   typescriptConfig,
   viteConfig,
@@ -299,12 +307,53 @@ const client = [
 ]
 
 const root = [
-  ...server,
+  js.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  pluginPromise.configs['flat/recommended'],
+  workspacesConfig,
+
+  serverFiles,
+  serverCommonjs,
+  serverMjs,
 
   {
     files: ['cypress/**/*.{js,mjs,ts}'],
     extends: [pluginCypress.configs.recommended],
   },
+
+  {
+    ...react.configs.flat.recommended,
+    files: ['packages/client/**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  },
+
+  {
+    ...react.configs.flat['jsx-runtime'],
+    files: ['packages/client/**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  },
+
+  {
+    ...reactHooks.configs.flat.recommended,
+    files: ['packages/client/**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  },
+
+  {
+    ...jsxA11y.flatConfigs.recommended,
+    files: ['packages/client/**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  },
+
+  {
+    ...clientFiles,
+    files: ['packages/client/**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+  },
+
+  {
+    ...clientCommonjs,
+    files: ['packages/client/**/*.cjs'],
+  },
+
+  typescriptConfig,
+  viteConfig,
+  globalIgnores(globalIgnoreList),
 ]
 
 export {
