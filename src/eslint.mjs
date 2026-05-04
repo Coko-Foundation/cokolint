@@ -321,17 +321,17 @@ const root = [
    */
   {
     ...serverFiles,
-    ignores: ['packages/client/**'],
+    ignores: ['packages/client/**', 'cypress'],
   },
 
   {
     ...serverCommonjs,
-    ignores: ['packages/client/**'],
+    ignores: ['packages/client/**', 'cypress'],
   },
 
   {
     ...serverMjs,
-    ignores: ['packages/client/**'],
+    ignores: ['packages/client/**', 'cypress'],
   },
 
   /**
