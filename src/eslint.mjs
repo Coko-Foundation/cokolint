@@ -242,6 +242,7 @@ const clientFiles = {
       process: 'readonly',
     },
     ecmaVersion: 'latest',
+    sourceType: 'module',
     parserOptions: {
       ecmaFeatures: {
         jsx: true,
