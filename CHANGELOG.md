@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.35](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** do not leak node rules in cypress folder ([553bd4a](https://gitlab.coko.foundation/cokoapps/lint/commit/553bd4a821a7b40e010224bc04fbbd5760c18a1a))
+
 ## [3.0.0-alpha.34](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2026-05-04)
 
 
