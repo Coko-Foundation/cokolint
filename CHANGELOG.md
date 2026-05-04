@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.32](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** add explicit sourcetype module for client js files ([c05d056](https://gitlab.coko.foundation/cokoapps/lint/commit/c05d0560a8fbfa2797eec257c1c06840b1f94641))
+
 ## [3.0.0-alpha.31](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2026-05-04)
 
 
