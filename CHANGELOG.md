@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.34](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** allow import/export in cypress files ([2fee5a0](https://gitlab.coko.foundation/cokoapps/lint/commit/2fee5a082394780076460ed5d8a68bfab9cd326a))
+
 ## [3.0.0-alpha.33](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2026-05-04)
 
 
