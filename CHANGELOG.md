@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.31](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2026-05-04)
+
+
+### Features
+
+* **eslint:** more nuanced root config ([d8f7fc2](https://gitlab.coko.foundation/cokoapps/lint/commit/d8f7fc2fb9926bdfc92e66712b468827936efd48))
+
 ## [3.0.0-alpha.30](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2026-05-04)
 
 
