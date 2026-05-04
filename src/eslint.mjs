@@ -313,9 +313,20 @@ const root = [
   pluginPromise.configs['flat/recommended'],
   workspacesConfig,
 
-  serverFiles,
-  serverCommonjs,
-  serverMjs,
+  {
+    ...serverFiles,
+    ignores: ['packages/client/**'],
+  },
+
+  {
+    ...serverCommonjs,
+    ignores: ['packages/client/**'],
+  },
+
+  {
+    ...serverMjs,
+    ignores: ['packages/client/**'],
+  },
 
   {
     files: ['cypress/**/*.{js,mjs,ts}'],
