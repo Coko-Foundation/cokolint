@@ -308,11 +308,17 @@ const client = [
 ]
 
 const root = [
+  /**
+   * COMMON 1
+   */
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   pluginPromise.configs['flat/recommended'],
   workspacesConfig,
 
+  /**
+   * SERVER
+   */
   {
     ...serverFiles,
     ignores: ['packages/client/**'],
@@ -328,10 +334,21 @@ const root = [
     ignores: ['packages/client/**'],
   },
 
+  /**
+   * CYPRESS
+   */
+
   {
     files: ['cypress/**/*.{js,mjs,ts}'],
     extends: [pluginCypress.configs.recommended],
+    languageOptions: {
+      sourceType: 'module',
+    },
   },
+
+  /**
+   * CLIENT
+   */
 
   {
     ...react.configs.flat.recommended,
@@ -362,6 +379,10 @@ const root = [
     ...clientCommonjs,
     files: ['packages/client/**/*.cjs'],
   },
+
+  /**
+   * COMMON 2
+   */
 
   typescriptConfig,
   viteConfig,
