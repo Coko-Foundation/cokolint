@@ -107,8 +107,10 @@ const lintStaged = async options => {
   const success = await lintStagedLib({
     cwd: process.cwd(),
     config: {
-      '*.{js,mjs}': jsArray,
-      '*.{js,graphql,json,yml,md,html}': ['prettier --check'],
+      '*.{js,mjs,ts,mts,jsx,tsx}': jsArray,
+      '*.{js,ts,mjs,mts,jsx,tsx,graphql,json,yml,md,html}': [
+        'prettier --check',
+      ],
     },
   })
 
