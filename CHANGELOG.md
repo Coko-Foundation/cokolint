@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.37](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2026-05-05)
+
+
+### Bug Fixes
+
+* **lintstaged:** fix extensions during lintstaged ([2241a37](https://gitlab.coko.foundation/cokoapps/lint/commit/2241a37a549ffd06cd54e97f05f78f50562b199d))
+
 ## [3.0.0-alpha.36](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2026-05-04)
 
 
