@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0...v3.1.0) (2026-08-31)
+
+
+### Features
+
+* **eslint:** add playwright plugin ([f366e32](https://gitlab.coko.foundation/cokoapps/lint/commit/f366e32847b510d83d1dece88080d74d943510d2))
+
+
+### Bug Fixes
+
+* do not git add when running the commit command ([e3e67ac](https://gitlab.coko.foundation/cokoapps/lint/commit/e3e67ac539edf87775a04e69bcae261d5f4b30b0))
+
 ## [3.0.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-beta.0...v3.0.0) (2026-06-10)
 
 ## [3.0.0-beta.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.37...v3.0.0-beta.0) (2026-06-08)
