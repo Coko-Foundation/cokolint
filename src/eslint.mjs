@@ -7,6 +7,7 @@ import workspaces from 'eslint-plugin-workspaces'
 import pluginPromise from 'eslint-plugin-promise'
 import nodePlugin from 'eslint-plugin-n'
 import pluginCypress from 'eslint-plugin-cypress'
+import playwright from 'eslint-plugin-playwright'
 import vitest from '@vitest/eslint-plugin'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -347,6 +348,15 @@ const root = [
         ...globals.browser,
       },
     },
+  },
+
+  /**
+   * PLAYWRIGHT
+   */
+
+  {
+    files: ['playwright/**/*.{js,mjs,ts}', 'playwright.config.{js,mjs,ts}'],
+    extends: [playwright.configs['flat/recommended']],
   },
 
   /**
