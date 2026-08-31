@@ -120,7 +120,6 @@ const lintStaged = async options => {
 }
 
 const commit = async options => {
-  execSync('git add -A', { stdio: 'inherit' })
   execSync('git status', { stdio: 'inherit' })
 
   await lintStaged(options)
