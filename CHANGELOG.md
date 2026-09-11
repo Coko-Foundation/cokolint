@@ -2,6 +2,275 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0...v3.1.0) (2026-08-31)
+
+
+### Features
+
+* **eslint:** add playwright plugin ([f366e32](https://gitlab.coko.foundation/cokoapps/lint/commit/f366e32847b510d83d1dece88080d74d943510d2))
+
+
+### Bug Fixes
+
+* do not git add when running the commit command ([e3e67ac](https://gitlab.coko.foundation/cokoapps/lint/commit/e3e67ac539edf87775a04e69bcae261d5f4b30b0))
+
+## [3.0.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-beta.0...v3.0.0) (2026-06-10)
+
+## [3.0.0-beta.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.37...v3.0.0-beta.0) (2026-06-08)
+
+## [3.0.0-alpha.37](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2026-05-05)
+
+
+### Bug Fixes
+
+* **lintstaged:** fix extensions during lintstaged ([2241a37](https://gitlab.coko.foundation/cokoapps/lint/commit/2241a37a549ffd06cd54e97f05f78f50562b199d))
+
+## [3.0.0-alpha.36](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** fix cypress pattern and add browser globals to pattern ([5784998](https://gitlab.coko.foundation/cokoapps/lint/commit/57849987886257f769ec115d85570b3a27d5152f))
+
+## [3.0.0-alpha.35](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** do not leak node rules in cypress folder ([553bd4a](https://gitlab.coko.foundation/cokoapps/lint/commit/553bd4a821a7b40e010224bc04fbbd5760c18a1a))
+
+## [3.0.0-alpha.34](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** allow import/export in cypress files ([2fee5a0](https://gitlab.coko.foundation/cokoapps/lint/commit/2fee5a082394780076460ed5d8a68bfab9cd326a))
+
+## [3.0.0-alpha.33](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** make sure server rules do not bleed into client ([2291bcd](https://gitlab.coko.foundation/cokoapps/lint/commit/2291bcd5073b1e5f3bad9efd08a15f1f1c9f098e))
+
+## [3.0.0-alpha.32](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2026-05-04)
+
+
+### Bug Fixes
+
+* **eslint:** add explicit sourcetype module for client js files ([c05d056](https://gitlab.coko.foundation/cokoapps/lint/commit/c05d0560a8fbfa2797eec257c1c06840b1f94641))
+
+## [3.0.0-alpha.31](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2026-05-04)
+
+
+### Features
+
+* **eslint:** more nuanced root config ([d8f7fc2](https://gitlab.coko.foundation/cokoapps/lint/commit/d8f7fc2fb9926bdfc92e66712b468827936efd48))
+
+## [3.0.0-alpha.30](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2026-05-04)
+
+
+### Features
+
+* allow passing path to the lint commands ([dd7a355](https://gitlab.coko.foundation/cokoapps/lint/commit/dd7a35561e0757f03d11d192f60b43834a63ce56))
+
+## [3.0.0-alpha.29](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2026-04-29)
+
+
+### Features
+
+* **eslint:** export root eslint config ([5b2c6d5](https://gitlab.coko.foundation/cokoapps/lint/commit/5b2c6d50377b40ad8b84b4188ac4fd35a226502a))
+
+## [3.0.0-alpha.28](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2026-04-28)
+
+
+### Bug Fixes
+
+* **eslint:** fix cz config issues on the client side ([11f92ed](https://gitlab.coko.foundation/cokoapps/lint/commit/11f92ed65f709a9e8a69012b91b5d8d0b72d0288))
+
+## [3.0.0-alpha.27](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2026-04-27)
+
+
+### Bug Fixes
+
+* **stylelint:** properly disable rule ([24c16b6](https://gitlab.coko.foundation/cokoapps/lint/commit/24c16b619d431f26c33d33268cb4f085a859cc1b))
+
+## [3.0.0-alpha.26](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.25...v3.0.0-alpha.26) (2026-04-27)
+
+
+### Features
+
+* **stylelint:** allow empty source ([64eb3b8](https://gitlab.coko.foundation/cokoapps/lint/commit/64eb3b83e3a8200432e5e624b3458cf43328bbd3))
+
+## [3.0.0-alpha.25](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.24...v3.0.0-alpha.25) (2026-04-23)
+
+
+### Features
+
+* **eslint:** add root config with cypress plugin ([6078f5b](https://gitlab.coko.foundation/cokoapps/lint/commit/6078f5bf6e451903738a8eda6f288b7f52ee3877))
+* **eslint:** enable the eslint plugin promises config ([00a6f56](https://gitlab.coko.foundation/cokoapps/lint/commit/00a6f5644eb4f4c371577abdcf4e869383faae0d))
+* **stylelint:** modern stylelint configuration ([9741171](https://gitlab.coko.foundation/cokoapps/lint/commit/974117104009e9b3a254b9539d8082198d68553c))
+
+## [3.0.0-alpha.24](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.23...v3.0.0-alpha.24) (2026-02-04)
+
+
+### Features
+
+* **eslint:** add process to client globals ([4e12d2d](https://gitlab.coko.foundation/cokoapps/lint/commit/4e12d2d3c892636297516e6ca6c8afa24076d276))
+
+## [3.0.0-alpha.23](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2026-02-03)
+
+
+### Bug Fixes
+
+* fix position of react detect setting in object ([eb81055](https://gitlab.coko.foundation/cokoapps/lint/commit/eb81055ada1dd3f11cc161640491a93455c4e13f))
+
+## [3.0.0-alpha.22](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2026-02-03)
+
+
+### Features
+
+* **eslint:** detect react version ([3f5d4fe](https://gitlab.coko.foundation/cokoapps/lint/commit/3f5d4fe1c64fa0bd455d56f386ee646030b5917e))
+
+## [3.0.0-alpha.21](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2026-01-26)
+
+
+### Bug Fixes
+
+* **eslint:** no extensions for jsx/tsx files ([25ec578](https://gitlab.coko.foundation/cokoapps/lint/commit/25ec5782e79c2960a56d5416a995093148f90411))
+
+## [3.0.0-alpha.20](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.19...v3.0.0-alpha.20) (2026-01-26)
+
+
+### Bug Fixes
+
+* **eslint:** export client config ([5d4df78](https://gitlab.coko.foundation/cokoapps/lint/commit/5d4df78d62005544afc2143e83ca951ddad07c56))
+
+## [3.0.0-alpha.19](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2026-01-23)
+
+
+### Features
+
+* **eslint:** add client config ([ac6878a](https://gitlab.coko.foundation/cokoapps/lint/commit/ac6878ae6f3934eccdb0d48c4a39331311fe6ce2))
+
+## [3.0.0-alpha.18](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.17...v3.0.0-alpha.18) (2026-01-20)
+
+
+### Bug Fixes
+
+* fix commit command ([9934d20](https://gitlab.coko.foundation/cokoapps/lint/commit/9934d2075bfea115265400df4d6be864f1f8eed8))
+
+## [3.0.0-alpha.17](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2026-01-20)
+
+
+### Features
+
+* add lint-staged and commit commands ([dcff789](https://gitlab.coko.foundation/cokoapps/lint/commit/dcff78993000a4df6ef0e35f67057d5de05682d7))
+
+## [3.0.0-alpha.16](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2026-01-19)
+
+
+### Bug Fixes
+
+* include file extension for commitizen import ([3911856](https://gitlab.coko.foundation/cokoapps/lint/commit/3911856673e137136e1754563259c254f158a20d))
+
+## [3.0.0-alpha.15](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.14...v3.0.0-alpha.15) (2026-01-19)
+
+
+### Bug Fixes
+
+* fix package.json index path ([4bac830](https://gitlab.coko.foundation/cokoapps/lint/commit/4bac8300f6a1e6e83544c61c9b8d8b2daa4451c9))
+
+## [3.0.0-alpha.14](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.13...v3.0.0-alpha.14) (2026-01-19)
+
+
+### Bug Fixes
+
+* fix cli import of package.json ([c4325d2](https://gitlab.coko.foundation/cokoapps/lint/commit/c4325d2a7757b8dfac224d1edb7cc827df9ab12e))
+
+## [3.0.0-alpha.13](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.12...v3.0.0-alpha.13) (2026-01-19)
+
+
+### Bug Fixes
+
+* fix cli path in package.json ([e7dae84](https://gitlab.coko.foundation/cokoapps/lint/commit/e7dae84139742c11bab104e0e7c4bece95964c50))
+
+## [3.0.0-alpha.12](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.11...v3.0.0-alpha.12) (2026-01-19)
+
+## [3.0.0-alpha.11](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.10...v3.0.0-alpha.11) (2026-01-19)
+
+## [3.0.0-alpha.10](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2025-12-02)
+
+
+### Bug Fixes
+
+* **eslint:** do not autofix vitest/no-focused-tests ([717897e](https://gitlab.coko.foundation/cokoapps/lint/commit/717897e1b072c651008c52ebddaf7df9cdbbdfb3))
+
+## [3.0.0-alpha.9](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2025-12-01)
+
+
+### Features
+
+* **eslint:** add workspaces plugin ([0bfb382](https://gitlab.coko.foundation/cokoapps/lint/commit/0bfb382057548895c92cd53282745457d8ba0b5e))
+
+## [3.0.0-alpha.8](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2025-11-18)
+
+
+### Bug Fixes
+
+* **eslint:** allow unused vars if they start with _ ([3f2fca0](https://gitlab.coko.foundation/cokoapps/lint/commit/3f2fca094ea69f9b5560f07851083bea637bd3ed))
+
+## [3.0.0-alpha.7](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2025-11-06)
+
+
+### Bug Fixes
+
+* **eslint:** disable vitest typecheck ([3184e6e](https://gitlab.coko.foundation/cokoapps/lint/commit/3184e6ec614639584c5e31c45a039931accf36fa))
+
+## [3.0.0-alpha.6](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2025-11-06)
+
+
+### Features
+
+* **eslint:** add vitest plugin ([92a0f86](https://gitlab.coko.foundation/cokoapps/lint/commit/92a0f864f91b7a67b4c65de841757223290e1b63))
+
+## [3.0.0-alpha.5](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2025-11-06)
+
+
+### Bug Fixes
+
+* **eslint:** refine new eslint rules ([caca5f4](https://gitlab.coko.foundation/cokoapps/lint/commit/caca5f45e743725ce259704328a85c7791d33f6f))
+
+## [3.0.0-alpha.4](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2025-11-06)
+
+## [3.0.0-alpha.3](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* **eslint:** fix ecma version ([66f0ae8](https://gitlab.coko.foundation/cokoapps/lint/commit/66f0ae8a6d0d36d4e527f7d820445100df4231eb))
+
+## [3.0.0-alpha.2](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2025-10-24)
+
+
+### Bug Fixes
+
+* fix main field in package.json ([019d24e](https://gitlab.coko.foundation/cokoapps/lint/commit/019d24ef3cc4013bac163e13335c9b4edf4bc603))
+
+## [3.0.0-alpha.1](https://gitlab.coko.foundation/cokoapps/lint/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2025-10-24)
+
+
+### Features
+
+* **eslint:** add docs to eslint ignore ([9e116d7](https://gitlab.coko.foundation/cokoapps/lint/commit/9e116d78718fc0c26748c690467992b18cf1aed7))
+
+## [3.0.0-alpha.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.1.0...v3.0.0-alpha.0) (2025-10-24)
+
+
+### Features
+
+* **eslint:** typescript support and drop airbnb for server ([8eaa3c6](https://gitlab.coko.foundation/cokoapps/lint/commit/8eaa3c68dfd666e86215d80ed94bd0a2081209e1))
+
 ## [2.1.0](https://gitlab.coko.foundation/cokoapps/lint/compare/v2.0.1...v2.1.0) (2024-02-26)
 
 

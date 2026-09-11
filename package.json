@@ -1,6 +1,6 @@
 {
   "name": "@coko/lint",
-  "version": "2.1.0",
+  "version": "3.1.0",
   "description": "Linter configurations and dependencies for coko's projects",
   "keywords": [
     "lint",
@@ -9,19 +9,22 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@gitlab.coko.foundation:cokoapps/lint.git"
+    "url": "https://gitlab.coko.foundation/cokoapps/lint"
   },
   "license": "MIT",
   "author": "Yannis Barlas",
-  "main": "src/index.js",
+  "engines": {
+    "node": ">= 22"
+  },
+  "main": "src/index.mjs",
   "bin": {
-    "coko-lint": "./src/cli.js"
+    "coko-lint": "./src/cli.mjs"
   },
   "files": [
     "src"
   ],
   "scripts": {
-    "cz": "git-cz",
+    "commit": "./src/cli.mjs commit --skip-stylelint",
     "prepare": "husky install",
     "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,45 +35,41 @@
     }
   },
   "dependencies": {
-    "@babel/core": "^7.17.7",
-    "@babel/eslint-parser": "^7.17.0",
-    "@babel/preset-react": "^7.16.7",
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "commander": "^11.1.0",
-    "commitizen": "^4.2.4",
-    "conventional-commit-types": "^3.0.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^6.3.0",
-    "eslint": "^8.11.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-config-standard-react": "^11.0.1",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^26.1.1",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
-    "longest": "^2.0.1",
-    "postcss-scss": "^4.0.3",
-    "prettier": "^2.6.0",
-    "right-pad": "^1.0.1",
-    "stylelint": "^14.6.0",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-order": "^5.0.0",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "@eslint/js": "^9.39.2",
+    "@vitest/eslint-plugin": "^1.6.6",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "commitizen": "^4.3.1",
+    "confusing-browser-globals": "^1.0.11",
+    "cz-customizable": "^7.5.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-cypress": "^5.2.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^17.23.2",
+    "eslint-plugin-playwright": "^2.11.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-workspaces": "^0.11.1",
+    "globals": "^17.0.0",
+    "lint-staged": "^16.2.7",
+    "postcss": "^8.5.6",
+    "postcss-styled-syntax": "^0.7.1",
+    "prettier": "^3.8.0",
+    "stylelint": "^17.1.1",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
   },
   "devDependencies": {
-    "standard-version": "^9.3.2"
+    "standard-version": "^9.5.0",
+    "styled-components": "^6.3.8"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "yarn@4.10.3"
 }
